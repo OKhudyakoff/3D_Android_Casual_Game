@@ -23,6 +23,8 @@ public class PlayerEntity : Character
 
     public Collider2D Player_Collider { get; private set; }
 
+    [SerializeField] private WeaponsHolder weaponsHolder;
+
     #endregion
 
     #region CheckTransforms
@@ -145,6 +147,7 @@ public class PlayerEntity : Character
             if (aimDirection != Vector3.zero)
             {
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(aimDirection), 0.4f);
+                weaponsHolder.JoystickAttack();
             }
             else if(moveRotation != Vector3.zero)
             {
