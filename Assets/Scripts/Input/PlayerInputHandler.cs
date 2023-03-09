@@ -7,7 +7,7 @@ using UnityEngine.InputSystem.Users;
 public class PlayerInputHandler : MonoBehaviour
 {
     private PlayerInput playerInput;
-    private PlayerControll playerControll;
+    public PlayerControll playerControll;
     
     public Vector2 RawMovementInput { get; private set; }
     public Vector2 joystickLook;
